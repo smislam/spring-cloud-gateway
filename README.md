@@ -1,9 +1,6 @@
-# Example of a Spring Cloud Gateway As a Proxy to othe Microservices
+# An example of Spring Cloud Gateway as a Proxy to other Microservices
 
-This example solves the use case where we have a centralized proxy that authenticates users and forwards some headers to the downstream applications. 
-
-This example is using one downstream application.  If we have many, change the code accordingly.
-
+This example solves the use case where we have a centralized proxy that authenticates users.  Also forwards some headers to the downstream applications. 
 
 ## Implementation Details
 This example is using one downstream application.  If we have many, change the code accordingly.  This example uses:
@@ -21,3 +18,6 @@ This example is using one downstream application.  If we have many, change the c
 ## Results
 If all goes well, you should see this:
 ![image](proxy.PNG "Proxy for Spring Boot")
+
+### Notes
+Please make sure you add additional security to downsteam application to validate that the request cam from the proxy application.  Otherwise anybody can bypass the proxy application.
