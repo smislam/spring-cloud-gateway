@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: proxy
+  security:
+    oauth2:
+      client:
+        registration:
+          myoidc:
+            client-id: <Add Your Client ID>
+            client-secret: <Add Your Client Secret>
+            authorization-grant-type: authorization_code
+            scope:
+            - openid
+            - profile
+            redirect-uri: <Add Your Redirect URI>
+        provider:
+          myoidc:
+            issuer-uri: <Add Your Issuer URO>
+
+  cloud:
+    gateway:
+      routes:
+      - id: anotherapp
+        uri: http://localhost:8888
+        predicates:
+        - Path=/**
