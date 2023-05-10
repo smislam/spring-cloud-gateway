@@ -20,7 +20,6 @@ public class Prefilter {
                 if (p instanceof Authentication) {
                     Authentication authentication = (Authentication) p;
                     Object principal = authentication.getPrincipal();
-                    System.out.println(principal.getClass());
                     if (principal instanceof DefaultOidcUser) {
                         DefaultOidcUser user = (DefaultOidcUser) principal;
 
