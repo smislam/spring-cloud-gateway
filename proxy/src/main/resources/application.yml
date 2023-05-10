@@ -15,7 +15,7 @@ spring:
             redirect-uri: <Add Your Redirect URI>
         provider:
           myoidc:
-            issuer-uri: <Add Your Issuer URO>
+            issuer-uri: <Add Your Issuer URI>
 
   cloud:
     gateway:

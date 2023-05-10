@@ -29,10 +29,10 @@ public class SecurityConfig {
     private CorsConfigurationSource corsConfig() {
         CorsConfiguration configuration = new CorsConfiguration();
         // configuration.setAllowCredentials(true);
-		configuration.setAllowedOrigins(Arrays.asList("http://localhost:8080/"));
-		configuration.setAllowedMethods(Arrays.asList("GET","POST","HEAD","PUT","DELETE"));
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		source.registerCorsConfiguration("localhost:8888/**", configuration);
-		return source;
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:8080/"));
+        configuration.setAllowedMethods(Arrays.asList("GET","POST","HEAD","PUT","DELETE"));
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("localhost:8888/**", configuration);
+        return source;
     }
 }
