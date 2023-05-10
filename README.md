@@ -20,4 +20,4 @@ If all goes well, we should see this:
 ![image](proxy.PNG "Proxy for Spring Boot")
 
 ### Notes
-We will have to add additional security to downsteam application to validate that the request came from the proxy application.  Otherwise anybody can bypass the proxy application.
+We will have to add additional security to downsteam applications to validate that the request came from the proxy application.  Otherwise anybody can bypass the proxy application.  There are many ways of doing this.  One option would be to pass the auth token and have the applications use spring security to validate the token using the OIDC provider.
